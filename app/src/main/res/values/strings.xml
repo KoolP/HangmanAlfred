@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hangman Pat</string>
+    <string name="h1act1">Hangman</string>
+    <string name="byAlfred">J-Alfred A edition</string>
+    <string name="play">Play</string>
+    <string name="about">About</string>
+    <string name="h1actOm">En man avrättades</string>
+    <string name="story">Johan Alfred Andersson Ander, född 27 november 1873 i Ljusterö socken, död 23 november 1910 på Långholmens centralfängelse i Stockholm (avrättad), var en svensk kypare, värdshusvärd, spårvagnsförare och tillika den sista personen att avrättas i Sverige då han dömts för ett brutalt rånmord. Han är den ende som avrättats med giljotin i Sverige. - Wikipedia</string>
+    <string name="author">App author: Patrik - koolsport.se\nIT-Högskolan, Göteborg</string>
+</resources>
