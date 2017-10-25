@@ -32,6 +32,7 @@
         android:layout_height="wrap_content"
         android:background="#EF9A9A"
         android:fontFamily="casual"
+        android:onClick="play2"
         android:text="@string/play2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

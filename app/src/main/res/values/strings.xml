@@ -12,4 +12,5 @@
     <string name="hintname">Enter your name</string>
     <string name="play2">Play</string>
     <string name="bellToll">For whom the bell tolls?</string>
+    <string name="youareex">Execution of</string>
 </resources>

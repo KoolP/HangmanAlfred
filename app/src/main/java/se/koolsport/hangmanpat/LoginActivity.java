@@ -22,8 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         //start new activity
         Intent intent = new Intent(this, GameActivity.class);
         //include a message as astring. ?
-        intent.putExtra("Nameofplayer",editText.getText().toString());
-        intent.putExtra("nameofplayer", true);
+        String message = editText.getText().toString();
+        if (message.equals("") ||  message.equals(" ")) {
+            message = "Anonymous";
+        }
+        intent.putExtra("Nameofplayer",message);
 
         startActivity(intent);
     }

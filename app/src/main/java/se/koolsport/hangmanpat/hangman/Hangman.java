@@ -6,6 +6,7 @@ import java.util.Random;
  * Created by patrikrikamahinnenberg on 25/10/17.
  */
 
+
 public class Hangman {
 
     private String[] listWords;
