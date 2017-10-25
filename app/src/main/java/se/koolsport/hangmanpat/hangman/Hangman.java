@@ -12,6 +12,7 @@ public class Hangman {
     private String[] listWords;
     private String mysteryWord;
     private char[] guess;
+    private int a = 0;
 
     public Hangman () {
         listWords = new String[10];
@@ -43,6 +44,11 @@ public class Hangman {
                 guess[j] = playerGuess;
                 hit = true;
             }
+
+            if (hit == false) {
+                a++;
+            }
+
     }
 
     return hit;
@@ -52,6 +58,7 @@ public class Hangman {
     public String getMaskedWord() {
     return String.valueOf(guess);
     }
+
 
 }
 

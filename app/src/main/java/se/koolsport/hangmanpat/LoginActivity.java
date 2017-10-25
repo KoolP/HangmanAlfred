@@ -28,6 +28,9 @@ public class LoginActivity extends AppCompatActivity {
         }
         intent.putExtra("Nameofplayer",message);
 
+        //Simple intent without default anonymous
+        //intent.putExtra("Message",editText.getText().toString());
+
         startActivity(intent);
     }
 
