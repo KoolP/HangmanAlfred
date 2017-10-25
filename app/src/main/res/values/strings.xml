@@ -17,4 +17,5 @@
     <string name="guesshint">Guess letter</string>
     <string name="guessButton">Guess</string>
     <string name="hiddenWord"/>
+    <string name="findWord">Guess word\nor die</string>
 </resources>
