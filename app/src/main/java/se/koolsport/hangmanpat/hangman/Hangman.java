@@ -14,6 +14,12 @@ public class Hangman {
     private char[] guess;
     private int a = 0;
 
+    public char getGuessedLetter() {
+        return guessedLetter;
+    }
+
+    private char guessedLetter = ' ';
+
     public Hangman () {
         listWords = new String[10];
         listWords[0] = "sword";
@@ -47,6 +53,7 @@ public class Hangman {
 
             if (hit == false) {
                 a++;
+                guessedLetter = playerGuess;
             }
 
     }

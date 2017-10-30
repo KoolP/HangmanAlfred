@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context="se.koolsport.hangmanpat.AboutActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"/>
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -16,7 +27,8 @@
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -31,7 +43,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:text="Johan Alfred Andersson Ander, född 27 november 1873 i Ljusterö socken, död 23 november 1910 på Långholmens centralfängelse i Stockholm (avrättad), var en svensk kypare, värdshusvärd, spårvagnsförare och tillika den sista personen att avrättas i Sverige[1] då han dömts för ett brutalt rånmord. Han är den ende som avrättats med giljotin i Sverige." />
+        tools:text="Johan Alfred Andersson Ander, född 27 november 1873 i Ljusterö socken, död 23 november 1910 på Långholmens centralfängelse i Stockholm (avrättad), var en svensk kypare, värdshusvärd, spårvagnsförare och tillika den sista personen att avrättas i Sverige[1] då han dömts för ett brutalt rånmord. Han är den ende som avrättats med giljotin i Sverige."
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
 
     <TextView
         android:id="@+id/textView7"
@@ -41,5 +55,6 @@
         android:layout_marginTop="54dp"
         android:text="@string/author"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginStart="16dp"/>
 </android.support.constraint.ConstraintLayout>
