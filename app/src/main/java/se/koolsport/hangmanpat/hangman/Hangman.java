@@ -1,5 +1,6 @@
 package se.koolsport.hangmanpat.hangman;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -10,8 +11,24 @@ import java.util.Random;
 public class Hangman {
 
     private String[] listWords;
+
+    public String getMysteryWord() {
+        return mysteryWord;
+    }
+
     private String mysteryWord;
     private char[] guess;
+
+    public ArrayList<String> getLetterList() {
+        return letterList;
+    }
+
+    private ArrayList<String> letterList;
+
+    public int getA() {
+        return a;
+    }
+
     private int a = 0;
 
     public char getGuessedLetter() {
@@ -20,7 +37,10 @@ public class Hangman {
 
     private char guessedLetter = ' ';
 
+
+
     public Hangman () {
+        letterList = new ArrayList<>();
         listWords = new String[10];
         listWords[0] = "sword";
         listWords[1] = "bishop";
@@ -50,15 +70,24 @@ public class Hangman {
                 guess[j] = playerGuess;
                 hit = true;
             }
+        }
 
             if (hit == false) {
                 a++;
-                guessedLetter = playerGuess;
-            }
 
+                //addar och char blir String
+                letterList.add(String.valueOf(playerGuess));
     }
 
     return hit;
+
+    }
+
+    //resultCompare
+    public boolean isWin (){
+        if (!getMaskedWord().contains("-")) {
+            return true;
+        } return  false;
 
     }
 

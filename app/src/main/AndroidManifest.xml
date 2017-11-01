@@ -20,6 +20,8 @@
         <activity android:name=".GameActivity" android:windowSoftInputMode="adjustResize"/> //android:windowSoftInputMode="adjustResize"
         <activity android:name=".LoginActivity">
         </activity>
+        <activity android:name=".ResultActivity">
+        </activity>
     </application>
 
 </manifest>

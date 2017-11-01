@@ -1,13 +1,13 @@
 package se.koolsport.hangmanpat;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
 
 import se.koolsport.hangmanpat.hangman.Hangman;
 
@@ -16,7 +16,9 @@ public class GameActivity extends AppCompatActivity {
     private TextView playerName;
     private EditText userInput;
     private Hangman hangman;
-    private ArrayList<String> letterList;
+    //skapa variabel påarray
+    private TypedArray pictures;
+    private ImageView changePicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,9 @@ public class GameActivity extends AppCompatActivity {
         TextView showMysteryLetters = (TextView)findViewById(R.id.hiddenWord);
         showMysteryLetters.setText(hangman.getMaskedWord());
 
-        //Create ArrayList
-        letterList = new ArrayList<>();
+
+        //Skapa arrayn av bilder från xml
+        pictures = getResources().obtainTypedArray(R.array.pictures);
 
     }
 
@@ -51,16 +54,39 @@ public class GameActivity extends AppCompatActivity {
         //Empties letter in input field
         userInput.setText(" ");
 
-        //add chars to arraylist from another class and getmethod, ändrar char till string
-        letterList.add(String.valueOf(hangman.getGuessedLetter()));
 
         //create textview and typcast
         TextView missedChar = (TextView)findViewById(R.id.lettersGuessed);
         //Place to value textview
-        missedChar.setText(String.valueOf(letterList));
+        missedChar.setText(String.valueOf(hangman.getLetterList()));
+
+        changePicture = (ImageView)findViewById(R.id.hangImage);
+        changePicture.setImageResource(pictures.getResourceId(hangman.getA(), 0));
+
+        TextView triesCount = (TextView)findViewById(R.id.triesText);
+        //add text to tryCount, from ten down
+        triesCount.setText("Tries left " + (10-hangman.getA()));
+
+
+        if(hangman.isWin()) {
+            Intent i = new Intent(this, ResultActivity.class);
+            i.putExtra("Result", "You Survive");
+            i.putExtra("theWord", hangman.getMysteryWord());
+            i.putExtra("triesA", (10-hangman.getA()));
+
+            startActivity(i);
+
+
+        } else if (hangman.getA () == 10) {
+            Intent i = new Intent(this, ResultActivity.class);
+            i.putExtra("Result", "You are Executed");
+            i.putExtra("theWord", hangman.getMysteryWord());
+            i.putExtra("triesA", (10-hangman.getA()));
+
+            startActivity(i);
+        }
+
 
     }
-
-
 
 }

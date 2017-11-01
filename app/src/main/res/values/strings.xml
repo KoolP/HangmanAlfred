@@ -18,4 +18,5 @@
     <string name="guessButton">Guess</string>
     <string name="hiddenWord"/>
     <string name="findWord">Guess word\nor get hanged!</string>
+    <string name="startButton">Start again</string>
 </resources>

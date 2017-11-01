@@ -11,6 +11,7 @@
         <item>@drawable/hang7</item>
         <item>@drawable/hang8</item>
         <item>@drawable/hang9</item>
+        <item>@drawable/hang10</item>
     </array>
 
 </resources>
